@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link href="~/Content/css/lobipanel/css/tether.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/Content/css/lobipanel/css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/Content/css/lobipanel/css/lobicard.min.css" rel="stylesheet" />
+    <link href="~/Content/css/lobipanel/css/github.css" rel="stylesheet" />
+    <link href="~/Content/css/pace/flash.css" rel="stylesheet" />
+    <link href="~/Content/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/css/pe-icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <link href="~/Content/css/themify-icons/themify-icons.css" rel="stylesheet" />
+    <link href="~/Content/css/icheck/skins/all.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap-toggle/bootstrap4-toggle.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="~/Content/css/site.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container">
+            @Html.ActionLink("Technical Test", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        @Html.ActionLink("Git Hub Users", "Index", "Home", new { area = "" }, new { @class = "nav-link text-dark" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Privacy", "Privacy", "Home", new { area = "" }, new { @class = "nav-link text-dark" })
+                    </li>
+                </ul>
+            </div>
+        </div>
+     </nav>
+
+
+        @*<header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+                    @Html.ActionLink("Technical Exercise", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Git Hub Users</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>*@
+
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2022 - Accredi Git Hub Users - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+
+        <script src="~/Content/lib/jquery/dist/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        @*<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>*@
+        <script src="~/Content/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/Content/css/lobipanel/js/jquery-ui.min.js"></script>
+        <!-- lobicard ui min js -->
+        <script src="~/Content/css/lobipanel/js/jquery-ui.min.js"></script>
+        <!-- lobicard ui touch-punch-improved js -->
+        <script src="~/Content/css/lobipanel/js/jquery.ui.touch-punch-improved.js"></script>
+        <!-- lobicard tether min js -->
+        <script src="~/Content/css/lobipanel/js/tether.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <!-- lobicard js -->
+        <script src="~/Content/css/lobipanel/js/lobicard.js"></script>
+        <!-- lobicard highlight js -->
+        <script src="~/Content/css/lobipanel/js/highlight.js"></script>
+        <!-- Pace js -->
+        <script src="~/Content/css/pace/pace.min.js"></script>
+        <!-- NiceScroll -->
+        <script src="~/Content/css/slimScroll/jquery.nicescroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="~/Content/css/fastclick/fastclick.min.js"></script>
+        <!-- CRMadmin frame -->
+        <script src="~/Content/lib/bootstrap/dist/js/custom.js"></script>
+        <!-- End Core Plugins
+       =====================================================================-->
+        <!-- Start Page Lavel Plugins
+       =====================================================================-->
+        <!-- iCheck js -->
+        <script src="~/Content/css/icheck/icheck.min.js"></script>
+        <!-- Bootstrap toggle -->
+        <script src="~/Content/css/bootstrap-toggle/bootstrap4-toggle.min.js"></script>
+
+        @RenderSection("scripts", required: false)
+</body>
+</html>
